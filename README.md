@@ -4,7 +4,7 @@ Questo progetto è ispirato da Facebook e mira a replicare alcune delle funziona
 
 ### Repository di Origine
 
-Il progetto originale da cui è stato tratto questo esempio è disponibile su GitHub. Puoi trovare il repository originale [Public_Web_Hacker](https://github.com/username/repository-name).
+Il progetto originale da cui è stato tratto questo esempio è disponibile su GitHub. Puoi trovare il repository originale [Public_Web_Hacker]([https://github.com/username/repository-name](https://github.com/ScriptGitHub17/Public_Web_Hacker)).
 
 ### Crediti
 

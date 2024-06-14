@@ -22,4 +22,4 @@ Questo progetto è concesso sotto la licenza [MIT](LICENSE), che consente un uso
 5: nano server.py
 6: nano index.html
 7: python3 server.py
-
+Divertiti

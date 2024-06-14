@@ -8,7 +8,7 @@ Il progetto originale da cui è stato tratto questo esempio è disponibile su Gi
 
 ### Crediti
 
-Questo progetto è stato sviluppato da [Nome Cognome](https://github.com/username), con il contributo di [Minestronex](https://github.com/collaborator), come parte di un corso o esercizio di apprendimento.
+Questo progetto è stato sviluppato da [Minestronex](https://github.com/username), con il contributo di [Minestronex](https://github.com/collaborator), come parte di un corso o esercizio di apprendimento.
 
 ### Licenza
 

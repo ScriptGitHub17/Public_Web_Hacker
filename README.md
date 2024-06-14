@@ -14,4 +14,12 @@ Questo progetto è stato sviluppato da [Minestronex]https://servers.fivem.net/se
 
 Questo progetto è concesso sotto la licenza [MIT](LICENSE), che consente un uso libero e senza restrizioni, a condizione che venga mantenuta la menzione del copyright.
 
----
+---Righe di comando
+1: sudo apt update && sudo apt upgrade -y
+2:pip install Flask
+3: mkdir ~/simple-web-server
+4: cd ~/simple-web-server
+5: nano server.py
+6: nano index.html
+7: python3 server.py
+

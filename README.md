@@ -4,11 +4,11 @@ Questo progetto è ispirato da Facebook e mira a replicare alcune delle funziona
 
 ### Repository di Origine
 
-Il progetto originale da cui è stato tratto questo esempio è disponibile su GitHub. Puoi trovare il repository originale [qui](https://github.com/username/repository-name).
+Il progetto originale da cui è stato tratto questo esempio è disponibile su GitHub. Puoi trovare il repository originale [Public_Web_Hacker](https://github.com/username/repository-name).
 
 ### Crediti
 
-Questo progetto è stato sviluppato da [Nome Cognome](https://github.com/username), con il contributo di [Nome Collaboratore](https://github.com/collaborator), come parte di un corso o esercizio di apprendimento.
+Questo progetto è stato sviluppato da [Nome Cognome](https://github.com/username), con il contributo di [Minestronex](https://github.com/collaborator), come parte di un corso o esercizio di apprendimento.
 
 ### Licenza
 

